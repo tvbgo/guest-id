@@ -4,10 +4,53 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :cpf,
+                autofocus: true,
+                input_html: { autocomplete: "cpf" }%>
+    <%= f.input :tipo_doc,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "tipo_doc" }%>
+    <%= f.input :num_doc,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "num_doc" }%>
+    <%= f.input :expedidor,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "expedidor" }%>
+    <%= f.input :nome_completo,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "nome_completo" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :profissao,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "profissao" }%>
+    <%= f.input :nascimento,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "nascimento" }, as: :date%>
+    <%= f.input :sexo,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "sexo" }%>
+    <%= f.input :telefone,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "telefone" }%>
+    <%= f.input :cep,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "cep" }%>
+    <%= f.input :complemento,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "complemento" }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
