@@ -37,17 +37,17 @@ ActiveRecord::Schema.define(version: 2020_12_17_174000) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "cpf"
-    t.string "tipo_doc"
-    t.string "num_doc"
-    t.string "expedidor"
-    t.string "nome_completo"
-    t.string "profissao"
-    t.date "nascimento"
-    t.string "sexo"
-    t.string "telefone"
-    t.string "cep"
-    t.string "complemento"
+    t.string "cpf", null: false
+    t.string "tipo_doc", null: false
+    t.string "num_doc", null: false
+    t.string "expedidor", null: false
+    t.string "nome_completo", null: false
+    t.string "profissao", null: false
+    t.date "nascimento", null: false
+    t.string "sexo", null: false
+    t.string "telefone", null: false
+    t.string "cep", null: false
+    t.string "complemento", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

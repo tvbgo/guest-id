@@ -7,7 +7,7 @@ class FnrhsController < ApplicationController
     @fnrh = Fnrh.new(fnrh_params)
     @fnrh.user = current_user
     if @fnrh.save
-      redirect_to user_fnrh_path(@fnrh, current_user)
+      redirect_to user_fnrh_path(current_user, @fnrh)
     else
       render :new
     end

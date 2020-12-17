@@ -4,6 +4,31 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :nome_completo,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "nome_completo" }%>
+    <%= f.input :nascimento,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "nascimento" }, as: :date, start_year: Date.today.year - 90,
+                end_year: Date.today.year - 18, order: [:day, :month, :year] %>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :telefone,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "telefone" }%>
+    <%= f.input :profissao,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "profissao" }%>
+    <%= f.input :sexo,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "sexo" }%>
     <%= f.input :cpf,
                 autofocus: true,
                 input_html: { autocomplete: "cpf" }%>
@@ -19,31 +44,6 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "expedidor" }%>
-    <%= f.input :nome_completo,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "nome_completo" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :profissao,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "profissao" }%>
-    <%= f.input :nascimento,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "nascimento" }, as: :date, start_year: Date.today.year - 90,
-                end_year: Date.today.year - 18, order: [:day, :month, :year] %>
-    <%= f.input :sexo,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "sexo" }%>
-    <%= f.input :telefone,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "telefone" }%>
     <%= f.input :cep,
                 required: true,
                 autofocus: true,

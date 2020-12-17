@@ -1,1 +1,22 @@
-Aqui está a FNRH!!
+
+<div class="fnrh-container">
+  <h3>Ficha Nacional de Registro de Hospedes </h3>
+  <hr>
+  <h5><%= @fnrh.hotel %></h5>
+  <div class="card-dados-hospede">
+    <p><strong>Nome completo: </strong><%= @fnrh.user.nome_completo %></p><p><strong>Nascimento: </strong><%= @fnrh.user.nascimento %></p>
+    <p><strong>Email: </strong><%= @fnrh.user.email %></p><p><strong>Telefone: </strong><%= @fnrh.user.telefone %></p>
+    <p><strong>Profissão: </strong><%= @fnrh.user.profissao %></p><p><strong>Sexo: </strong><%= @fnrh.user.sexo  %></p>
+    <p><strong>Cpf: </strong><%= @fnrh.user.cpf %></p><p><strong>Tipo do Documento: </strong><%= @fnrh.user.tipo_doc %></p>
+    <p><strong>Num. Documento: </strong><%= @fnrh.user.num_doc %></p><p><strong>Expedido por: </strong><%= @fnrh.user.expedidor %></p>
+    <p><strong>CEP: </strong><%= @fnrh.user.cep %></p><p><strong>Complemento: </strong><%= @fnrh.user.complemento %></p>
+  </div>
+
+  <div class="card-dados-reserva">
+    <p><strong>De: </strong><%= @fnrh.check_in %> <strong>Até: </strong><%= @fnrh.check_out %></p>
+    <p><strong>Motivo: </strong><%= @fnrh.motivo %></p><p><strong>Meio de Transporte: </strong><%= @fnrh.meio_de_transporte %></p>
+    <p><strong>Procedência: </strong><%= @fnrh.procedencia %></p><p><strong>Próximo Destino: </strong><%= @fnrh.prox_dest %></p>
+  </div>
+</div>
+
+
