@@ -1,6 +1,6 @@
 
 
-<%= simple_form_for(@fnrh, url: user_fnrhs_path, method: 'post') %>
+<%= simple_form_for(@fnrh, url: user_fnrhs_path, method: 'post') do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
     <%= f.input :check_in,

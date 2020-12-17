@@ -34,7 +34,8 @@
     <%= f.input :nascimento,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "nascimento" }, as: :date%>
+                input_html: { autocomplete: "nascimento" }, as: :date, start_year: Date.today.year - 90,
+                end_year: Date.today.year - 18, order: [:day, :month, :year] %>
     <%= f.input :sexo,
                 required: true,
                 autofocus: true,

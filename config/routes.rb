@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   resources :users, only: :show do
     resources :fnrhs, only: [ :new, :create, :index, :show ]
   end
-
 end

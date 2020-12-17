@@ -4,12 +4,17 @@ class FnrhsController < ApplicationController
   end
 
   def create
-    @fnrh = Fnrh.new(frnh_params)
+    @fnrh = Fnrh.new(fnrh_params)
+    @fnrh.user = current_user
     if @fnrh.save
-      redirect_to user_fnrh_path(@fnrh)
+      redirect_to user_fnrh_path(@fnrh, current_user)
     else
       render :new
     end
+  end
+
+  def show
+    @fnrh = Fnrh.find(params[:id])
   end
 
   private
