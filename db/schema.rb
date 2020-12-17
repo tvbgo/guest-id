@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_17_152806) do
+ActiveRecord::Schema.define(version: 2020_12_17_160854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fnrhs", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.date "check_in"
+    t.date "check_out"
+    t.string "meio_de_transporte"
+    t.string "procedencia"
+    t.string "motivo"
+    t.string "prox_dest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_fnrhs_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +40,5 @@ ActiveRecord::Schema.define(version: 2020_12_17_152806) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "fnrhs", "users"
 end

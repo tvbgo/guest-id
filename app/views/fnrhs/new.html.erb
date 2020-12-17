@@ -1,0 +1,34 @@
+
+
+<%= simple_form_for(@fnrh, url: user_fnrhs_path, method: 'post') %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <%= f.input :check_in,
+                autofocus: true,
+                input_html: { autocomplete: "cpf" }, as: :date%>
+    <%= f.input :check_out,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "tipo_doc" }, as: :date%>
+    <%= f.input :motivo,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "motivo" }%>
+    <%= f.input :meio_de_transporte,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "meio_de_transporte" }%>
+    <%= f.input :procedencia,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "procedencia" }%>
+    <%= f.input :prox_dest,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "prox_dest" }%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Criar" %>
+  </div>
+<% end %>
