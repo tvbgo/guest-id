@@ -1,69 +1,72 @@
-<h2>Sign up</h2>
+<div class="form-container">
+  <h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :nome_completo,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "nome_completo" }%>
-    <%= f.input :nascimento,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "nascimento" }, as: :date, start_year: Date.today.year - 90,
-                end_year: Date.today.year - 18, order: [:day, :month, :year] %>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :telefone,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "telefone" }%>
-    <%= f.input :profissao,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "profissao" }%>
-    <%= f.input :sexo,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "sexo" }%>
-    <%= f.input :cpf,
-                autofocus: true,
-                input_html: { autocomplete: "cpf" }%>
-    <%= f.input :tipo_doc,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "tipo_doc" }%>
-    <%= f.input :num_doc,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "num_doc" }%>
-    <%= f.input :expedidor,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "expedidor" }%>
-    <%= f.input :cep,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "cep" }%>
-    <%= f.input :complemento,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "complemento" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :nome_completo,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "nome_completo" }%>
+      <%= f.input :nascimento,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "nascimento" }, as: :date, start_year: Date.today.year - 90,
+                  end_year: Date.today.year - 18, order: [:day, :month, :year] %>
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :telefone,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "telefone" }%>
+      <%= f.input :profissao,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "profissao" }%>
+      <%= f.input :sexo,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "sexo" }%>
+      <%= f.input :cpf,
+                  autofocus: true,
+                  input_html: { autocomplete: "cpf" }%>
+      <%= f.input :tipo_doc,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "tipo_doc" }%>
+      <%= f.input :num_doc,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "num_doc" }%>
+      <%= f.input :expedidor,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "expedidor" }%>
+      <%= f.input :cep,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "cep" }%>
+      <%= f.input :complemento,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "complemento" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Registrar" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Registrar" %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+
+</div>
