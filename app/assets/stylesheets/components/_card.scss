@@ -1,0 +1,28 @@
+
+.card {
+  background-color: $light-gray;
+  text-align: center;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 6px;
+  transition: 0.5s ease;
+  padding: 25px;
+
+}
+
+.card:hover .hide {
+  display: inline-grid;
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+  margin: 15px auto;
+  width: 70%;
+}
+}
+@media screen and (max-width: 620px) {
+  .card {
+  width: 70%;
+  margin: 15px auto;
+}
+}

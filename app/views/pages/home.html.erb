@@ -1,7 +1,23 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
-    <h1>Devolvendo o seu <strong>TEMPO</strong></h1>
+    <h1>Guest ID</h1>
     <p>Registre-se uma vez, faça check-in em qualquer hotel</p>
-    <a class="btn btn-flat" href="#">Registre-se</a>
+    <%= link_to 'Registre-se', new_user_registration_path, class: 'btn btn-flat' %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h3>Registre-se uma única vez</h3>
+    <p class="hide">Seus dados são mantidos em segurança e serão utilizados apenas por você, quando e onde quiser</p>
+  </div>
+  <div class="card">
+    <h3>Adicione um Hotel e a data de Check-in/out</h3>
+    <p class="hide">Falta apenas preencher o nome do Hotel, datas da estada e o principal modo de transporte</p>
+  </div>
+
+  <div class="card">
+    <h3>Pronto!</h3>
+    <p class="hide">Sua FNRH pode ser comparilhada diretamente pelo App, ou baixada em PDF para o seu dispositivo</p>
   </div>
 </div>
