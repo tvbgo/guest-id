@@ -1,4 +1,8 @@
 class FnrhsController < ApplicationController
+  def index
+    @fnrhs = Fnrh.all
+  end
+
   def new
     @fnrh = Fnrh.new
   end
@@ -20,6 +24,6 @@ class FnrhsController < ApplicationController
   private
 
   def fnrh_params
-    params.require(:fnrh).permit(:check_in, :check_out, :meio_de_transporte, :procedencia, :motivo, :prox_dest)
+    params.require(:fnrh).permit(:check_in, :check_out, :meio_de_transporte, :procedencia, :motivo, :prox_dest, :hotel)
   end
 end

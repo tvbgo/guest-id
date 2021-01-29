@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="fnrhs-container">
+    <% @fnrhs.each do |fnrh| %>
+      <% if fnrh.check_in >= Date.today %>
+        <div class="frnh-card"><%= fnrh.hotel %></div>
+      <% elsif fnrh.check_in <= Date.today && fnrh.check_in > Date.today - 29.day %>
+        <div class="frnh-card"> <%= fnrh.hotel %></div>
+      <% elsif fnrh.check_in <= Date.today - 29.day %>
+        <div class="frnh-card"> <%= fnrh.hotel %></div>
+        <% else %>
+        <%= link_to 'Crie uma FNRH para sua nova viagem', new_user_fnrh_path(current_user) %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
